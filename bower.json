@@ -1,0 +1,17 @@
+{
+  "name": "learn-react",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Duc Dao <ducdh1@smartosc.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
