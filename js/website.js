@@ -1,6 +1,6 @@
 let Input = React.createClass({
-	onAddClick: function () {
-		let websiteInput = React.findDOMNode(this.refs.newWesite);
+    onAddClick: function () {
+        let websiteInput = React.findDOMNode(this.refs.newWesite);
         this.props.handleAddNewWebsite(websiteInput.value);
     },
     render: function () {
@@ -27,14 +27,14 @@ let WebsiteList = React.createClass({
             websites: ["Udemy", "Codeschool", "Pluralsight"]
         };
     },
-	addNewWebsite: function (website) {
-		let websites = this.props.websites;
+    addNewWebsite: function (website) {
+        let websites = this.props.websites;
 
-		websites.push(website);
+        websites.push(website);
 
-		this.setProps({
-			websites: websites
-		})
+        this.setProps({
+            websites: websites
+        });
     },
     render: function () {
         let websites = this.props.websites.map(function (website) {
