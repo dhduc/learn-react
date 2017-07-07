@@ -7,6 +7,8 @@ Learn React
 
 ```
 npm install
+bower install
+npm run webpack
 npm start
 ```
 
