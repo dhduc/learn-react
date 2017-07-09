@@ -1,10 +1,15 @@
 var path = require('path');
 var webpack = require('webpack');
 
+const PATH = {
+    src: path.join(__dirname, 'src'),
+    build: path.join(__dirname, 'build')
+};
+
 module.exports = {
-    entry: './js/app.js',
+    entry: path.join(PATH.src, 'app.js'),
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: PATH.build,
         filename: 'main.bundle.js'
     },
     module: {
@@ -20,6 +25,14 @@ module.exports = {
     stats: {
         colors: true
     },
-    devtool: 'source-map',
-    watch: true
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ],
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: PATH.build,
+        hot: true,
+        inline: true,
+        historyApiFallback: true
+    }
 };

@@ -2,12 +2,13 @@
   "name": "learn-react",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
-    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
+  	"start": "webpack-dev-server",
+    "build": "webpack -p",
+    "babel": "babel --presets es2015 src/app.js -o build/main.bundle.js",
     "webpack": "webpack",
-    "start": "node index.js",
-    "test": "./node_modules/.bin/eslint js/*.js"
+    "test": "./node_modules/.bin/eslint src/*.js"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "babel-preset-react": "^6.24.1",
     "eslint": "^4.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "webpack": "^3.0.0"
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.1"
   }
 }
