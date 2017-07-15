@@ -1,4 +1,5 @@
 .idea
 node_modules
-build
-components
+build/components
+build/main.bundle.js
+build/main.bundle.js.map
